@@ -1,5 +1,6 @@
 import React from 'react'
 import FoodCard from '../components/FoodCard'
+import MenuCard from '../components/MenuCard'
 
 function Home() {
     const foodCard =[
@@ -17,6 +18,32 @@ function Home() {
             id :3,
             imgUrl : "https://plus.unsplash.com/premium_photo-1673769108070-580fe90b8de7?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             name : "Momos"
+        }
+    ]
+    const menuCard =[
+        {
+            id: 1,
+            name :"Burger",
+            price :"600",
+            imageUrl :"https://plus.unsplash.com/premium_photo-1664472724753-0a4700e4137b?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+            id: 2,
+            name :"Burger",
+            price :"600",
+            imageUrl :"https://plus.unsplash.com/premium_photo-1664472724753-0a4700e4137b?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+            id: 3,
+            name :"Burger",
+            price :"600",
+            imageUrl :"https://plus.unsplash.com/premium_photo-1664472724753-0a4700e4137b?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+            id: 4,
+            name :"Burger",
+            price :"600",
+            imageUrl :"https://plus.unsplash.com/premium_photo-1664472724753-0a4700e4137b?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
     ]
 
@@ -44,6 +71,22 @@ function Home() {
                     ))
                 }
             </div>
+        </section>
+                {/*  */}
+                <section className='mx-auto mt-10'>
+            <h2 className='text-center font-bold text-2x1'>Food Menu</h2>
+            <div className='flex flex-wrap justify-around mt-10 gap-4 mb-10'>
+                {/* <MenuCard/>
+                <MenuCard/>
+                <MenuCard/>
+                <MenuCard/> */}
+            {
+                menuCard.map((item)=>(
+                 <MenuCard key={item.id} name={item.name} price={item.price} image={item.imageUrl}/>
+                ))
+            }
+            </div>
+
         </section>
 
 
