@@ -76,10 +76,7 @@ function Home() {
                 <section className='mx-auto mt-10'>
             <h2 className='text-center font-bold text-2x1'>Food Menu</h2>
             <div className='flex flex-wrap justify-around mt-10 gap-4 mb-10'>
-                {/* <MenuCard/>
-                <MenuCard/>
-                <MenuCard/>
-                <MenuCard/> */}
+
             {
                 menuCard.map((item)=>(
                  <MenuCard key={item.id} name={item.name} price={item.price} image={item.imageUrl}/>
